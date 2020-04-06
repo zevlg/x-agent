@@ -1,7 +1,21 @@
 # x-agent
 Xorg session agent
 
-Handy for window manager developers
+`x-agent` starts sibling window manager process(`WM`) and provides
+keybinds to control this process.  If `WM` crashes or exits for some
+reason, `x-agent` starts `WM` again.
+
+Handy for window manager developers.
+
+## x-agent keybindings
+
+* <kbd>C-Sh-F6</kbd> - Kill `WM` with SIGABORT signal, this will cause
+  `WM` to dump core for futher investigation.
+* <kbd>C-Sh-F9</kbd> - Kill `WM` with SIGKILL signal, this will cause
+  `WM` to always exit.
+* <kbd>C-Sh-F11</kbd> - Kill `WM` with SIGTERM signal, this will cause
+  `WM` to terminate normally.
+* <kbd>C-Sh-ESC</kbd> - Exit x-agent.
 
 ## Example of using x-agent with [EXWM](https://github.com/ch11ng/exwm)
 
